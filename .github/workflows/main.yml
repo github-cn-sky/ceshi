@@ -10,8 +10,10 @@ jobs:
      
     steps:
     - name: cehis
+      uses: appleboy/ssh-action@v0.1.10
       with:
         server: ${{ secrets.HOST }}
         username: ${{ secrets.USER_NAME }}
         password: ${{ secrets.password }}
-        run : git pull
+        run: cd /data/wwwroot/ceshi && git pull
+        
