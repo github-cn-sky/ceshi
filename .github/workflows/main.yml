@@ -9,6 +9,9 @@ jobs:
     runs-on: ubuntu-latest
      
     steps:
+    - name: host
+      run: echo ${{ secrets.HOST_TEST }} ${{ secrets.USER_NAME }} ${{ secrets.USER_PASSWORD }}
+      
     - name: cehis
       uses: appleboy/ssh-action@v0.1.10
       with:
