@@ -1,4 +1,4 @@
-name: CI
+iname: CI
 run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on:
   push:
@@ -7,11 +7,11 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    
-  
+     
     steps:
-    - name: cehis 
+    - name: cehis
       with:
         server: ${{ secrets.HOST }}
         username: ${{ secrets.USER_NAME }}
         password: ${{ secrets.password }}
+        run : git pull
