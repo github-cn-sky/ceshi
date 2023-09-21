@@ -10,7 +10,7 @@ jobs:
      
     steps:
     - name: host
-      run: echo HOST_TEST
+      run: echo ${{  vars.HOST_TEST }}
       
     - name: cehis
       uses: appleboy/ssh-action@v0.1.10
