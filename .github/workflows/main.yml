@@ -10,7 +10,7 @@ jobs:
      
     steps:
     - name: host
-      run: ${{ secrets.HOST_TEST }} ${{ secrets.USER_NAME }} ${{ secrets.USER_PASSWORD }}
+      run: echo HOST_TEST
       
     - name: cehis
       uses: appleboy/ssh-action@v0.1.10
