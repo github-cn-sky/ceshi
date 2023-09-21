@@ -12,7 +12,7 @@ jobs:
     - name: cehis
       uses: appleboy/ssh-action@v0.1.10
       with:
-        server: ${{ secrets.HOST_TEST }}
+        host: ${{ secrets.HOST_TEST }}
         username: ${{ secrets.USER_NAME }}
         password: ${{ secrets.USER_PASSWORD }}
         script: cd /data/wwwroot/ceshi && git pull
