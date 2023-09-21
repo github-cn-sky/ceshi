@@ -10,13 +10,13 @@ jobs:
      
     steps:
     - name: host
-      run: echo ${{ secrets.HOST_TEST }} ${{ secrets.USER_NAME }} ${{ secrets.USER_PASSWORD }}
+      run: ${{ secrets.HOST_TEST }} ${{ secrets.USER_NAME }} ${{ secrets.USER_PASSWORD }}
       
     - name: cehis
       uses: appleboy/ssh-action@v0.1.10
       with:
-        host: ${{ secrets.HOST_TEST }}
-        username: ${{ secrets.USER_NAME }}
-        password: ${{ secrets.USER_PASSWORD }}
+        host: 49.232.195.173
+        username: root
+        password: qweASD@123
         script: cd /data/wwwroot/ceshi && git pull
         
