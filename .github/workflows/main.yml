@@ -15,5 +15,5 @@ jobs:
         server: ${{ secrets.HOST_TEST }}
         username: ${{ secrets.USER_NAME }}
         password: ${{ secrets.USER_PASSWORD }}
-        run: cd /data/wwwroot/ceshi && git pull
+        script: cd /data/wwwroot/ceshi && git pull
         
