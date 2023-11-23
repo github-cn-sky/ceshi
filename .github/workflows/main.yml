@@ -22,5 +22,5 @@ jobs:
         script: cd /data/wwwroot/ceshi && git pull
         
     - name: 输出结果
-      run: echo ${{ steps.cc.option }}
+      run: echo ${{ steps.cc.option.username }}
         
