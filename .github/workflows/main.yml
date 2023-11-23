@@ -14,9 +14,13 @@ jobs:
       
     - name: cehis
       uses: appleboy/ssh-action@v0.1.10
+      id: 测试
       with:
         host:  ${{ secrets.HOST_TEST }}
         username: root
         password: qweASD@123
         script: cd /data/wwwroot/ceshi && git pull
+        
+    - name: 输出结果
+      run: echo ${{ steps.cehis.option }}
         
