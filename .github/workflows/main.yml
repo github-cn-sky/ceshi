@@ -1,26 +1,35 @@
-name: C
-run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+name: Automatic deployment
+run-name: ${{ github.actor }} is git push 
 on:
   push:
     branches:
     - main
 jobs:
-  build:
+  Pull:
     runs-on: ubuntu-latest
-     
     steps:
-    - name: host
-      run: echo ${{  vars.HOST_TEST }}
-      
-    - name: cehis
+    - name: ssh 
       uses: appleboy/ssh-action@v0.1.10
-      id: cc
+      id: ssh
       with:
         host:  ${{ secrets.HOST_TEST }}
         username: root
         password: qweASD@123
         script: cd /data/wwwroot/ceshi && git pull
         
-    - name: 输出结果
-      run: echo ${{ steps.cc.outputs.username }}
+    - name: Send mail
+      uses: dawidd6/action-send-mail@v3
+      with:
+        server_address: smtp.qq.com
+        server_port: 465
+        username: 854377393@qq.com
+        password: mrumlbnokrunbfif
+        subject: Github Actions job result
+        to: 854377393@qq.com
+        from: 854377393@qq.com
+        body: Build job of ${{github.repository}} completed successfully!
+         
+    
+
+      
         
