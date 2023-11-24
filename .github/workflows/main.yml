@@ -17,7 +17,7 @@ jobs:
         password: qweASD@123
         script: cd /data/wwwroot/ceshi && git pull
         
-    - name: Send mail
+    - name: Send mail111
       uses: dawidd6/action-send-mail@v3
       with:
         server_address: smtp.qq.com
