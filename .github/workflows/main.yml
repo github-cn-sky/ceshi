@@ -27,7 +27,7 @@ jobs:
         subject: Github Actions job result
         to: 854377393@qq.com
         from: 854377393@qq.com
-        body: ${{ github.workflow }}-${{ github.ref }}-${{ github.workflow_ref }}-${{ github.action_status }}
+        body: ${{ github.workflow }}>>>${{ github.ref }}>>>>${{ github.workflow_ref }}>>>${{ github.action_status }}
          
     
 
