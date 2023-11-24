@@ -23,11 +23,11 @@ jobs:
         server_address: smtp.qq.com
         server_port: 465
         username: 854377393@qq.com
-        password: mrumlbnokrunbfif
+        password:  ${{ secrets.TOKEN }}
         subject: Github Actions job result
         to: 854377393@qq.com
         from: 854377393@qq.com
-        body: Build job of ${{github.repository}} completed successfully!
+        body: ${{ github.workflow }}-${{ github.ref }}-${{github.workflow_ref}}-${{github.action_status}}
          
     
 
