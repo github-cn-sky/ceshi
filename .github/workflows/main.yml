@@ -27,7 +27,7 @@ jobs:
         subject: Github Actions job result
         to: 854377393@qq.com
         from: 854377393@qq.com
-        body: ${{ fromJSON(github) }}
+        body: ${{ toJson( github ) }}
          
     
 
