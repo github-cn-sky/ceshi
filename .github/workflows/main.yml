@@ -24,7 +24,7 @@ jobs:
         server_port: 465
         username: 854377393@qq.com
         password:  ${{ secrets.TOKEN }}
-        subject: Github Actions job result
+        subject: Github Actions job result ${{ steps.ssh.outcome }}
         to: 854377393@qq.com
         from: 854377393@qq.com
         body: ${{ toJson( github ) }}
