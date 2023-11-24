@@ -19,6 +19,7 @@ jobs:
         
     - name: Send mail111
       uses: dawidd6/action-send-mail@v3
+      if: failure()
       with:
         server_address: smtp.qq.com
         server_port: 465
